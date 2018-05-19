@@ -134,7 +134,7 @@ export class Props {
   public renderImage?: (
     props: any
   ) => React.ReactElement<any> = (props: any) => {
-    return React.createElement(CachedImage, props)
+    return <CachedImage {...props} />
   }
 
   /**
