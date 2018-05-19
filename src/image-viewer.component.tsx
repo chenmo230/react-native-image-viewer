@@ -17,10 +17,6 @@ import {
 import ImageZoom from "react-native-image-pan-zoom";
 import styles from "./image-viewer.style";
 import { IImageInfo, IImageSize, Props, State } from "./image-viewer.type";
-import {
-  ImageCacheManager,
-} from 'react-native-cached-image';
-
 
 export default class ImageViewer extends React.Component<Props, State> {
   public static defaultProps = new Props();
