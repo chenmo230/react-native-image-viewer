@@ -18,6 +18,10 @@ import ImageZoom from "react-native-image-pan-zoom";
 import styles from "./image-viewer.style";
 import { IImageInfo, IImageSize, Props, State } from "./image-viewer.type";
 
+import {
+  CachedImage
+} from 'react-native-cached-image';
+
 export default class ImageViewer extends React.Component<Props, State> {
   public static defaultProps = new Props();
   public state = new State();
@@ -177,7 +181,7 @@ export default class ImageViewer extends React.Component<Props, State> {
       imageLoaded = true;
     }
 
-    Image.getSize(
+    CachedImage.getSize(
       image.url,
       (width: number, height: number) => {
         imageStatus.width = width;
